@@ -90,9 +90,14 @@ def step_options(node, root, closing_allowed=True):
     return opts
 
 
+FA_FINAL_OK = {"verb", "func_verb"}
+FA_FINAL_WORDS = {"ast", "nist", "hast", "bud", "shod", "mând", "kojâst",
+                  "mând", "bâd"}
+FA_BAD_INITIAL = {"râ", "-e", "o", "-i"}
+
 def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
         theme_id=None, theme_fa=None, max_cost=7.5, progress=True,
-        jitter=0.0, seed=0):
+        jitter=0.0, seed=0, fa_verb_final=False):
     import random
     rng = random.Random(seed)
     id_trie, id_entries = build_id_trie(theme_id)
@@ -293,6 +298,17 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
                 ffw, fval = rf
                 if not line_ok(fiw, id_entries) or not line_ok(ffw, fa_entries):
                     continue
+                first_fa = fa_entries[ffw[0]]
+                if first_fa["tr"] in FA_BAD_INITIAL or \
+                        first_fa["tag"] in ("ezafe", "clitic_and", "cop1s",
+                                            "cop1p", "cop3p"):
+                    continue
+                if fa_verb_final:
+                    last_fa = fa_entries[ffw[-1]]
+                    if not (last_fa["tag"] == "verb" or
+                            last_fa["tr"] in FA_FINAL_WORDS or
+                            last_fa["tag"].startswith("cop")):
+                        continue
                 s = score(cost, ival, fval)
                 completed.append((s, cost, fiw, ffw, pairs, sylls))
                 stats["completed_raw"] += 1

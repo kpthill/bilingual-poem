@@ -12,6 +12,9 @@ def main():
     ap.add_argument("--top", type=int, default=1200)
     ap.add_argument("--theme-id", default=None)
     ap.add_argument("--theme-fa", default=None)
+    ap.add_argument("--fa-verb-final", action="store_true")
+    ap.add_argument("--targets", default="8,9|9,10|10,11",
+                    help="pipe-separated syllable-target groups")
     args = ap.parse_args()
     ti = json.load(open(args.theme_id)) if args.theme_id else None
     tf = json.load(open(args.theme_fa)) if args.theme_fa else None
@@ -19,8 +22,10 @@ def main():
     merged = {}
     funnel = {"runs": [], "total_raw": 0}
     banned_id, banned_fa = {}, {}
+    tgroups = [tuple(int(x) for x in g.split(","))
+               for g in args.targets.split("|")]
     for i in range(args.runs):
-        targets = [(8, 9), (9, 10), (10, 11)][i % 3]
+        targets = tgroups[i % len(tgroups)]
         run_ti = dict(ti or {})
         run_tf = dict(tf or {})
         if i >= 2:      # later runs ban the emergent attractor words
@@ -30,7 +35,7 @@ def main():
             seed_targets=targets, beam=args.beam,
             jitter=(0.0 if i == 0 else args.jitter), seed=i,
             theme_id=run_ti, theme_fa=run_tf, max_lines=3000,
-            progress=False)
+            progress=False, fa_verb_final=args.fa_verb_final)
         funnel["runs"].append({"seed": i, "targets": targets,
                                "stats": stats, "lines": len(lines)})
         funnel["total_raw"] += stats["completed_raw"]
