@@ -47,7 +47,9 @@ def build_fa_trie(theme_boost=None):
         variants = [tuple(e["ph"])]
         if e["ph"][0] == "q" and len(e["ph"]) > 1 and is_vowel(e["ph"][1]):
             variants.append(tuple(e["ph"][1:]))   # epenthetic onset dropped
-        boost = (theme_boost or {}).get(e["tr"], 1.0)
+        base_tr = e["tr"].split("-")[0].lstrip("'")
+        boost = (theme_boost or {}).get(e["tr"]) \
+            or (theme_boost or {}).get(base_tr, 1.0)
         for ph in variants:
             key = (ph, e["script"])
             if key in seen or not ph:
