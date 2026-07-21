@@ -37,7 +37,9 @@ def load_wikipron():
             parts = line.rstrip("\n").split("\t")
             if len(parts) != 2:
                 continue
-            word, ipa = parts[0].lower(), parts[1].split(" ")
+            if parts[0] != parts[0].lower():
+                continue    # abbreviations (letter-name readings), proper nouns
+            word, ipa = parts[0], parts[1].split(" ")
             phones = []
             ok = True
             for p in ipa:
@@ -94,7 +96,8 @@ BLOCKLIST = {
     "is","in","on","no","so","do","go","to","of","at","we","he","be","me",
     "my","up","us","was","are","for","not","but","all","one","two","who",
     "out","now","get","got","let","hey","wow","ya-","a-","i-","u-","e-",
-    "aa","ii","uu","oo","ee","mmm","hmm","ohh","ahh","uhh",
+    "aa","ii","uu","oo","ee","mmm","hmm","ohh","ahh","uhh","stan","gua",
+    "sih","dong","deh","nih","tuh","kok","lho","loh","yah","nah","wah",
 }
 SHORT_WHITELIST = {  # <=3 letters admitted only from here
     "di","ke","ku","mu","dan","dia","aku","kau","itu","ini","ada","air",
@@ -145,7 +148,10 @@ def build(max_rank=30000, min_freq=40):
             phones = None
             if word in wp:
                 phones = wp[word]
-            elif "e" not in word:
+            elif "e" not in word and len(word) >= 5:
+                # short words must be Wiktionary-attested; the rule G2P
+                # path otherwise admits subtitle noise (names, romanized
+                # foreign words)
                 phones = g2p_rule(word)
             else:
                 # try prefix/suffix decomposition; prefix <e> is schwa
