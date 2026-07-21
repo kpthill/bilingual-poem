@@ -1,0 +1,7 @@
+  step 0: beam=47 completed=0
+  step 5: beam=2000 completed=0
+  step 10: beam=2000 completed=0
+  step 15: beam=2000 completed=0
+  step 20: beam=2000 completed=0
+  step 25: beam=2000 completed=0
+stats: {'expanded': 54634, 'completed_raw': 0}

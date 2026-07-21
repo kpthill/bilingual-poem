@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+data/build/
+nohup.out
