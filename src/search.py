@@ -11,6 +11,7 @@ from collections import defaultdict
 from phonespace import match_cost, is_vowel, EPSILON_COST, FA_DELETABLE, \
     ID_DELETABLE, METATHESIS_COST, pretty
 import lexicon_id, lexicon_fa
+from pos_lm import PosLM
 
 
 class Trie:
@@ -27,18 +28,21 @@ class Trie:
 
 def build_id_trie(theme_boost=None):
     lex = lexicon_id.build()
+    lm = PosLM("id")
     entries = []
     trie = Trie()
     for orth, (phones, freq) in lex.items():
         boost = (theme_boost or {}).get(orth, 1.0)
         lf = math.log(freq * boost + 1)
-        entries.append({"orth": orth, "ph": phones, "lf": lf})
+        entries.append({"orth": orth, "ph": phones, "lf": lf,
+                        "pos": lm.pos_of(orth)})
         trie.insert(phones, len(entries) - 1)
-    return trie, entries
+    return trie, entries, lm
 
 
 def build_fa_trie(theme_boost=None):
     raw = lexicon_fa.build()
+    lm = PosLM("fa")
     entries, trie = [], Trie()
     seen = set()
     for e in raw:
@@ -55,17 +59,26 @@ def build_fa_trie(theme_boost=None):
             if key in seen or not ph:
                 continue
             seen.add(key)
+            tag = e["tag"]
+            pos = lm.pos_of(e["script"])
+            if pos == "X":
+                pos = {"verb": "VERB"}.get(tag) or \
+                    ("AUX" if tag.startswith("cop") else None) or \
+                    ("NOUN" if tag in ("plural", "plural_an", "indef",
+                                       "ezafe", "poss2s", "poss3s")
+                     else "X")
             entries.append({"orth": e["script"], "tr": e["tr"], "ph": ph,
                             "lf": math.log(e["freq"] * boost + 1),
-                            "tag": e["tag"], "gloss": e["gloss"]})
+                            "tag": tag, "gloss": e["gloss"], "pos": pos})
             trie.insert(ph, len(entries) - 1)
-    return trie, entries
+    return trie, entries, lm
 
 
 WORD_PENALTY = 3.5         # discourages function-word confetti
 COST_WEIGHT = 2.4
 LEN_BONUS = 1.2            # per phone of a closed word
 SHORT_PENALTY = 3.5        # extra for 1-2 phone words
+POS_WEIGHT = 1.6           # weight of the UD POS-bigram syntax prior
 PENDING_HEURISTIC = 2.0    # beam-ranking credit per phone inside an open word
 LONG = 4                   # phones for a word to count as content
 
@@ -100,8 +113,8 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
         jitter=0.0, seed=0, fa_verb_final=False):
     import random
     rng = random.Random(seed)
-    id_trie, id_entries = build_id_trie(theme_id)
-    fa_trie, fa_entries = build_fa_trie(theme_fa)
+    id_trie, id_entries, id_lm = build_id_trie(theme_id)
+    fa_trie, fa_entries, fa_lm = build_fa_trie(theme_fa)
     if jitter:
         for e in id_entries:
             e["lf"] += rng.uniform(-jitter, jitter)
@@ -112,7 +125,8 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
     #         pairs, sylls, last_was_vowel, eps_streak, id_lf, fa_lf,
     #         id_wordlens, fa_wordlens)
     def initial():
-        return (0.0, id_trie, fa_trie, (), (), (), 0, False, 0, 0.0, 0.0, 0, 0)
+        return (0.0, id_trie, fa_trie, (), (), (), 0, False, 0, 0.0, 0.0,
+                0, 0, "BOS", "BOS")
 
     def score(cost, id_val, fa_val):
         return (id_val + fa_val) - COST_WEIGHT * cost
@@ -123,15 +137,17 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
             v -= SHORT_PENALTY
         return v
 
-    def close(words, val, node, entries):
-        """Close best word at node; block loop-y reuse of words."""
+    def close(words, val, node, entries, prev_pos, lm):
+        """Close best word at node; block loop-y reuse; pay POS bigram."""
         e = max(node.terms, key=lambda i: entries[i]["lf"])
         n_prev = words.count(e)
         if n_prev >= 2:
             return None
         if n_prev >= 1 and len(entries[e]["ph"]) < LONG:
             return None       # short words may not repeat at all
-        return words + (e,), val + word_value(entries[e])
+        pos = entries[e]["pos"]
+        v = val + word_value(entries[e]) + POS_WEIGHT * lm.trans(prev_pos, pos)
+        return words + (e,), v, pos
 
     completed = []
     beam_states = [initial()]
@@ -142,48 +158,52 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
         buckets = defaultdict(list)
         for st in beam_states:
             (cost, id_node, fa_node, id_words, fa_words, pairs, sylls,
-             last_v, eps, id_lf, fa_lf, did, dfa) = st
+             last_v, eps, id_lf, fa_lf, did, dfa, ipos, fpos) = st
             id_opts = step_options(id_node, id_trie)
             fa_opts = step_options(fa_node, fa_trie)
             stats["expanded"] += 1
 
             def push(ncost, nid, nfa, niw, nfw, npairs, nsyl, nlv, neps,
-                     nival, nfval, ndid, ndfa):
+                     nival, nfval, ndid, ndfa, nipos, nfpos):
                 if ncost > max_cost:
                     return
-                key = (id(nid), id(nfa), nsyl)
+                key = (id(nid), id(nfa), nsyl, nipos, nfpos)
                 s = score(ncost, nival, nfval) \
                     + PENDING_HEURISTIC * (ndid + ndfa)
                 buckets[key].append((-s, ncost, nid, nfa, niw, nfw, npairs,
                                      nsyl, nlv, neps, nival, nfval,
-                                     ndid, ndfa))
+                                     ndid, ndfa, nipos, nfpos))
 
             # 1. fa epsilon deletion (intervocalic ʔ/h)
             if last_v and eps == 0:
                 for p, ch, closed in step_options(fa_node, fa_trie):
                     if p in FA_DELETABLE and any(is_vowel(x) for x in ch.children):
-                        nfw, nfval = fa_words, fa_lf
+                        nfw, nfval, nfp = fa_words, fa_lf, fpos
                         if closed is not None:
-                            r = close(fa_words, fa_lf, closed, fa_entries)
+                            r = close(fa_words, fa_lf, closed, fa_entries,
+                                      fpos, fa_lm)
                             if r is None:
                                 continue
-                            nfw, nfval = r
+                            nfw, nfval, nfp = r
                         push(cost + EPSILON_COST, id_node, ch, id_words, nfw,
                              pairs + ((None, p),), sylls, True, 1, id_lf,
-                             nfval, did, 1 if closed is not None else dfa + 1)
+                             nfval, did, 1 if closed is not None else dfa + 1,
+                             ipos, nfp)
             # id-side h deletion
             if last_v and eps == 0:
                 for p, ch, closed in step_options(id_node, id_trie):
                     if p in ID_DELETABLE and any(is_vowel(x) for x in ch.children):
-                        niw, nival = id_words, id_lf
+                        niw, nival, nip = id_words, id_lf, ipos
                         if closed is not None:
-                            r = close(id_words, id_lf, closed, id_entries)
+                            r = close(id_words, id_lf, closed, id_entries,
+                                      ipos, id_lm)
                             if r is None:
                                 continue
-                            niw, nival = r
+                            niw, nival, nip = r
                         push(cost + EPSILON_COST, ch, fa_node, niw, fa_words,
                              pairs + ((p, None),), sylls, True, 1, nival,
-                             fa_lf, 1 if closed is not None else did + 1, dfa)
+                             fa_lf, 1 if closed is not None else did + 1, dfa,
+                             nip, fpos)
 
             # 2. normal paired step
             for ip, ich, iclosed in id_opts:
@@ -191,23 +211,25 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
                     c = match_cost(ip, fp)
                     if c is None:
                         continue
-                    niw, nival = id_words, id_lf
+                    niw, nival, nip = id_words, id_lf, ipos
                     if iclosed is not None:
-                        r = close(id_words, id_lf, iclosed, id_entries)
+                        r = close(id_words, id_lf, iclosed, id_entries,
+                                  ipos, id_lm)
                         if r is None:
                             continue
-                        niw, nival = r
-                    nfw, nfval = fa_words, fa_lf
+                        niw, nival, nip = r
+                    nfw, nfval, nfp = fa_words, fa_lf, fpos
                     if fclosed is not None:
-                        r = close(fa_words, fa_lf, fclosed, fa_entries)
+                        r = close(fa_words, fa_lf, fclosed, fa_entries,
+                                  fpos, fa_lm)
                         if r is None:
                             continue
-                        nfw, nfval = r
+                        nfw, nfval, nfp = r
                     v = is_vowel(ip)
                     push(cost + c, ich, fch, niw, nfw, pairs + ((ip, fp),),
                          sylls + (1 if v else 0), v, 0, nival, nfval,
                          1 if iclosed is not None else did + 1,
-                         1 if fclosed is not None else dfa + 1)
+                         1 if fclosed is not None else dfa + 1, nip, nfp)
 
             # 3. metathesis: id (V,h) ~ fa (h,V')
             for ip, ich, iclosed in id_opts:
@@ -225,25 +247,27 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
                             vc = match_cost(ip, fv)
                             if vc is None:
                                 continue
-                            niw, nival = id_words, id_lf
+                            niw, nival, nip = id_words, id_lf, ipos
                             bad = False
                             for cl in (iclosed, iclosed2):
                                 if cl is not None:
-                                    r = close(niw, nival, cl, id_entries)
+                                    r = close(niw, nival, cl, id_entries,
+                                              nip, id_lm)
                                     if r is None:
                                         bad = True
                                         break
-                                    niw, nival = r
+                                    niw, nival, nip = r
                             if bad:
                                 continue
-                            nfw, nfval = fa_words, fa_lf
+                            nfw, nfval, nfp = fa_words, fa_lf, fpos
                             for cl in (fclosed, fclosed2):
                                 if cl is not None:
-                                    r = close(nfw, nfval, cl, fa_entries)
+                                    r = close(nfw, nfval, cl, fa_entries,
+                                              nfp, fa_lm)
                                     if r is None:
                                         bad = True
                                         break
-                                    nfw, nfval = r
+                                    nfw, nfval, nfp = r
                             if bad:
                                 continue
                             ndid = did + 2 if iclosed is None and \
@@ -254,7 +278,7 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
                                  niw, nfw,
                                  pairs + (("META", ip, ih, fp, fv),),
                                  sylls + 1, False, 0, nival, nfval,
-                                 ndid, ndfa)
+                                 ndid, ndfa, nip, nfp)
 
         # prune: per-key, then stratified by content-word progress
         nxt = []
@@ -283,19 +307,23 @@ def run(seed_targets=(9, 10, 11), beam=6000, per_key=2, max_lines=4000,
         beam_states = []
         for st in chosen[:beam]:
             (_neg, cost, id_node, fa_node, id_words, fa_words, pairs, sylls,
-             last_v, eps, id_lf, fa_lf, did, dfa) = st
+             last_v, eps, id_lf, fa_lf, did, dfa, ipos, fpos) = st
             beam_states.append((cost, id_node, fa_node, id_words, fa_words,
                                 pairs, sylls, last_v, eps, id_lf, fa_lf,
-                                did, dfa))
+                                did, dfa, ipos, fpos))
             # completion check
             if sylls in seed_targets and id_node.terms and fa_node.terms \
                     and id_node is not id_trie and fa_node is not fa_trie:
-                ri = close(id_words, id_lf, id_node, id_entries)
-                rf = close(fa_words, fa_lf, fa_node, fa_entries)
+                ri = close(id_words, id_lf, id_node, id_entries,
+                           ipos, id_lm)
+                rf = close(fa_words, fa_lf, fa_node, fa_entries,
+                           fpos, fa_lm)
                 if ri is None or rf is None:
                     continue
-                fiw, ival = ri
-                ffw, fval = rf
+                fiw, ival, lip = ri
+                ffw, fval, lfp = rf
+                ival += POS_WEIGHT * id_lm.trans(lip, "EOS")
+                fval += POS_WEIGHT * fa_lm.trans(lfp, "EOS")
                 if not line_ok(fiw, id_entries) or not line_ok(ffw, fa_entries):
                     continue
                 first_fa = fa_entries[ffw[0]]
