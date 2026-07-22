@@ -1,0 +1,15 @@
+{
+ "coherence_id": 4,
+ "coherence_fa": 4,
+ "theme_id": "A single village day traced from dawn prayer to nightfall, in which land, mother, and house gradually fuse into one womb-image: the day opens with blurred prayer and chickens, passes through labor and dusk, and closes with the chant 'tanah tanah rumah' — earth ripening into home. The arc is temporal (morning-noon-night) and metaphoric (house becoming womb), and both threads resolve together in the final line.",
+ "theme_fa": "A Sufi lyric of self-annihilation and solitude: the speaker declares himself patient, then reed-flute (a clear Masnavi echo, reinforced by 'Rum' in line 10), arrow, and sigh, walking the blind road toward nothingness ('adam) under a recurring banner ('alam appears in lines 5, 7, 8), until only 'alone, alone, upon the moon' remains. The moon (lines 4, 9, 12) and the sigh (lines 5, 10) bind the arc from trace to erasure.",
+ "weakest_id": {
+  "line": 6,
+  "why": "'roda darah ekor' (wheel, blood, tail; JSON id n=24) is a bare noun-pile with no verb and no syntactic glue, and its slaughter imagery is the only violence in an otherwise domestic register — wheel, blood, and tail appear once and are never echoed by any later line, so it reads as an intrusion rather than a turn."
+ },
+ "weakest_fa": {
+  "line": 3,
+  "why": "'har 'imân did, in-am' (JSON id n=16) is the syntactically weakest moment: 'every faith saw' lacks an object, and the clipped 'in-am' ('this is what I am') asserts selfhood without any of the concrete emblems (reed, arrow, banner, sigh) that make the other self-declarations land; it restates line 2's gesture with less imagery."
+ },
+ "suggestion": "Remove line 6 ('roda darah ekor' / 'ro dâde rah-e kur'). On the Indonesian side it is the one unassimilated image, breaking the domestic village register with unechoed slaughter imagery; on the Persian side its loss is minor because the road motif returns more strongly in line 8 ('rah-im', we are the road), so cutting it tightens the Indonesian arc at almost no cost to the Persian one. No reordering beats this cut: the day-arc (ID) and the annihilation-arc (FA) already run in the same direction."
+}

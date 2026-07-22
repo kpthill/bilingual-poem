@@ -1,0 +1,814 @@
+[
+ {
+  "n": 0,
+  "line_score": 10.4,
+  "indonesian": "doa jadi desa buram",
+  "gloss_id": "prayer becomes a blurred village",
+  "persian_translit": "do'â jâ did-e sabur-am",
+  "persian_script_draft": "دعا جا دیده صبورم",
+  "gloss_fa": "the prayer has found a place; I am patient",
+  "flags": [],
+  "accent_cost": 3.0,
+  "syllables": 8,
+  "ipa": "d o a dʒ a d i d e s a b u r a m",
+  "M": [
+   4,
+   3
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 1,
+  "line_score": 10.27,
+  "indonesian": "rusa dan ayam",
+  "gloss_id": "the deer and the chicken",
+  "persian_translit": "ru sadâ nay-am",
+  "persian_script_draft": "رو صدا نیم",
+  "gloss_fa": "upon the voice, I am the reed",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 5,
+  "ipa": "r u s a d a n a j a m",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 2,
+  "line_score": 10.2,
+  "indonesian": "rusa dan abu di rumah",
+  "gloss_id": "the deer and the ash are at home",
+  "persian_translit": "ro sadâ nabud-i ru mah",
+  "persian_script_draft": "رو صدا نبودی رو مه",
+  "gloss_fa": "go — you were not a sound upon the moon",
+  "flags": [],
+  "accent_cost": 2.0,
+  "syllables": 8,
+  "ipa": "r u s a d a n a b u d i r u m a h",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 3,
+  "line_score": 10.05,
+  "indonesian": "rusa dan abu di rumah",
+  "gloss_id": "the deer and the ash are at home",
+  "persian_translit": "ro sadâ nabud-i ru mâh",
+  "persian_script_draft": "رو صدا نبودی رو ماه",
+  "gloss_fa": "go — you were not a sound upon the moon",
+  "flags": [],
+  "accent_cost": 3.0,
+  "syllables": 8,
+  "ipa": "r u s a d a n a b u d i r u m a h",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 4,
+  "line_score": 9.93,
+  "indonesian": "doa jadi debu dasar",
+  "gloss_id": "prayer becomes base dust",
+  "persian_translit": "do'â jâ did-e bud 'asar",
+  "persian_script_draft": "دعا جا دیده بود اثر",
+  "gloss_fa": "the prayer had seen the place - a trace",
+  "flags": [
+   "loan"
+  ],
+  "accent_cost": 4.0,
+  "syllables": 8,
+  "ipa": "d o a dʒ a d i d ə b u d a s a r",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 5,
+  "line_score": 9.88,
+  "indonesian": "kita ada malam rahim",
+  "gloss_id": "we exist; the night (is) merciful",
+  "persian_translit": "ki tâ 'adam 'alam rah-im",
+  "persian_script_draft": "که تا عدم علم رهیم",
+  "gloss_fa": "for until nonexistence, banner (aloft), we are the road",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 8,
+  "ipa": "k i t a ʔ a d a m a l a m r a h i m",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 6,
+  "line_score": 9.88,
+  "indonesian": "tanah ibu dalam tiram",
+  "gloss_id": "mother's land inside an oyster",
+  "persian_translit": "tan 'âh-i bud 'alam tir-am",
+  "persian_script_draft": "تن آهی بود علم تیرم",
+  "gloss_fa": "the body was a sigh; flag, I am the arrow",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 8,
+  "ipa": "t a n a h i b u d a l a m t i r a m",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 7,
+  "line_score": 9.85,
+  "indonesian": "hal ibu dasar rumah",
+  "gloss_id": "mother's matter (is) the house's foundation",
+  "persian_translit": "hâli bud 'asar ru mah",
+  "persian_script_draft": "حالی بود اثر رو مه",
+  "gloss_fa": "there was a feeling — a trace upon the moon",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 7,
+  "ipa": "h a l i b u d a s a r r u m a h",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 8,
+  "line_score": 9.81,
+  "indonesian": "salam roma salam",
+  "gloss_id": "greetings, Rome, greetings",
+  "persian_translit": "salâm rom 'asal-am",
+  "persian_script_draft": "سلام رم عسلم",
+  "gloss_fa": "greetings Rome, I am honey",
+  "flags": [
+   "loan"
+  ],
+  "accent_cost": 1.0,
+  "syllables": 6,
+  "ipa": "s a l a m r o m a s a l a m",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 9,
+  "line_score": 9.81,
+  "indonesian": "tadi dalam tiram",
+  "gloss_id": "just now, inside the oyster",
+  "persian_translit": "tâ did 'alam tir-am",
+  "persian_script_draft": "تا دید علم تیرم",
+  "gloss_fa": "when he saw the banner, I am the arrow",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 6,
+  "ipa": "t a d i d a l a m t i r a m",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 10,
+  "line_score": 9.66,
+  "indonesian": "hal ibu dasar rumah",
+  "gloss_id": "mother's matter (is) the house's foundation",
+  "persian_translit": "hâli bud 'asar ru mâh",
+  "persian_script_draft": "حالی بود اثر رو ماه",
+  "gloss_fa": "there was a feeling — a trace upon the moon",
+  "flags": [],
+  "accent_cost": 2.0,
+  "syllables": 7,
+  "ipa": "h a l i b u d a s a r r u m a h",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 11,
+  "line_score": 9.43,
+  "indonesian": "rumah sudah sudah",
+  "gloss_id": "the house — done, done",
+  "persian_translit": "rum hasud hasud 'âh",
+  "persian_script_draft": "روم حسود حسود آه",
+  "gloss_fa": "Rome [is] envious, envious — ah",
+  "flags": [],
+  "accent_cost": 3.0,
+  "syllables": 6,
+  "ipa": "r u m a h s u d a h s u d a h",
+  "M": [
+   3,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 12,
+  "line_score": 9.35,
+  "indonesian": "hari desa dan ayam",
+  "gloss_id": "the village day and the chicken",
+  "persian_translit": "har 'id-e sadâ nay-am",
+  "persian_script_draft": "هر عید صدا نیم",
+  "gloss_fa": "every feast of sound, I am the reed",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 7,
+  "ipa": "h a r i d e s a d a n a j a m",
+  "M": [
+   2,
+   4
+  ],
+  "G": [
+   3,
+   4
+  ]
+ },
+ {
+  "n": 13,
+  "line_score": 9.25,
+  "indonesian": "rumah ini massal",
+  "gloss_id": "this house is mass-scale",
+  "persian_translit": "ru mah-i nim 'asal",
+  "persian_script_draft": "رو مهی نیم عسل",
+  "gloss_fa": "upon a moon — half honey",
+  "flags": [],
+  "accent_cost": 0.0,
+  "syllables": 6,
+  "ipa": "r u m a h i n i m a s a l",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 14,
+  "line_score": 9.25,
+  "indonesian": "alam ini massal",
+  "gloss_id": "this nature/world (is) mass-scale",
+  "persian_translit": "'alam-i nim 'asal",
+  "persian_script_draft": "المی نیم عسل",
+  "gloss_fa": "a banner/world, half honey",
+  "flags": [
+   "script"
+  ],
+  "accent_cost": 0.0,
+  "syllables": 6,
+  "ipa": "a l a m i n i m a s a l",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 15,
+  "line_score": 9.0,
+  "indonesian": "robot ibu dan garam",
+  "gloss_id": "mother's robot and salt",
+  "persian_translit": "ro bot-i bud 'angâr-am",
+  "persian_script_draft": "رو بتی بود انگارم",
+  "gloss_fa": "the face was an idol, I suppose",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 7,
+  "ipa": "r o b o t i b u d a n ɡ a r a m",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   4
+  ]
+ },
+ {
+  "n": 16,
+  "line_score": 8.96,
+  "indonesian": "hari mandi di enam",
+  "gloss_id": "the day bathes at six",
+  "persian_translit": "har 'imân did 'in-am",
+  "persian_script_draft": "هر ایمان دید اینم",
+  "gloss_fa": "every faith saw; I am this",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 6,
+  "ipa": "h a r i m a n d i d i n a m",
+  "M": [
+   3,
+   2
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 17,
+  "line_score": 8.92,
+  "indonesian": "rusa dan imam",
+  "gloss_id": "a deer and an imam",
+  "persian_translit": "ru sadâ nim-am",
+  "persian_script_draft": "رو صدا نیمم",
+  "gloss_fa": "upon the voice, I am half",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 5,
+  "ipa": "r u s a d a n i m a m",
+  "M": [
+   3,
+   2
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 18,
+  "line_score": 8.8,
+  "indonesian": "tanah tanah tanam",
+  "gloss_id": "land, land — plant!",
+  "persian_translit": "tanhâ tanhâ tan-am",
+  "persian_script_draft": "تنها تنها تنم",
+  "gloss_fa": "alone, alone, I am a body",
+  "flags": [],
+  "accent_cost": 4.0,
+  "syllables": 6,
+  "ipa": "t a n a h t a n a h t a n a m",
+  "M": [
+   2,
+   4
+  ],
+  "G": [
+   3,
+   4
+  ]
+ },
+ {
+  "n": 19,
+  "line_score": 8.8,
+  "indonesian": "tanah tanah tiram",
+  "gloss_id": "oyster lands, oyster lands",
+  "persian_translit": "tanhâ tanhâ tir-am",
+  "persian_script_draft": "تنها تنها تیرم",
+  "gloss_fa": "alone, alone, I am an arrow",
+  "flags": [],
+  "accent_cost": 4.0,
+  "syllables": 6,
+  "ipa": "t a n a h t a n a h t i r a m",
+  "M": [
+   2,
+   4
+  ],
+  "G": [
+   3,
+   4
+  ]
+ },
+ {
+  "n": 20,
+  "line_score": 8.69,
+  "indonesian": "tanah tanah rumah",
+  "gloss_id": "the house's lands",
+  "persian_translit": "tanhâ tanhâ ru mâh",
+  "persian_script_draft": "تنها تنها رو ماه",
+  "gloss_fa": "alone, alone, upon the moon",
+  "flags": [],
+  "accent_cost": 5.0,
+  "syllables": 6,
+  "ipa": "t a n a h t a n a h r u m a h",
+  "M": [
+   2,
+   4
+  ],
+  "G": [
+   3,
+   4
+  ]
+ },
+ {
+  "n": 21,
+  "line_score": 8.68,
+  "indonesian": "rusa dan awam",
+  "gloss_id": "the deer and the common folk",
+  "persian_translit": "ru sadâ nav-am",
+  "persian_script_draft": "رو صدا نوم",
+  "gloss_fa": "upon the voice, I am new",
+  "flags": [],
+  "accent_cost": 2.0,
+  "syllables": 5,
+  "ipa": "r u s a d a n a w a m",
+  "M": [
+   3,
+   2
+  ],
+  "G": [
+   4,
+   3
+  ]
+ },
+ {
+  "n": 22,
+  "line_score": 8.5,
+  "indonesian": "hari desa dan imam",
+  "gloss_id": "village day and imam",
+  "persian_translit": "har 'id-e sadâ nim-am",
+  "persian_script_draft": "هر عید صدا نیمم",
+  "gloss_fa": "every feast of sound, I am half",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 7,
+  "ipa": "h a r i d e s a d a n i m a m",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 23,
+  "line_score": 8.46,
+  "indonesian": "tadi dalam budi",
+  "gloss_id": "just now, within virtue",
+  "persian_translit": "tâ did 'alam bud-i",
+  "persian_script_draft": "تا دید علم بودی",
+  "gloss_fa": "when he looked, you were a banner",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 6,
+  "ipa": "t a d i d a l a m b u d i",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 24,
+  "line_score": 8.46,
+  "indonesian": "roda darah ekor",
+  "gloss_id": "the wheel of tail-blood",
+  "persian_translit": "ro dâda rah-e kor",
+  "persian_script_draft": "رو داده ره کور",
+  "gloss_fa": "the blind road has shown its face",
+  "flags": [],
+  "accent_cost": 1.0,
+  "syllables": 6,
+  "ipa": "r o d a d a r a h e k o r",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 25,
+  "line_score": 8.43,
+  "indonesian": "tanah rumah budi",
+  "gloss_id": "the land of the house of virtue",
+  "persian_translit": "tanhâ ru mâh bud-i",
+  "persian_script_draft": "تنها رو ماه بودی",
+  "gloss_fa": "you were alone on the moon",
+  "flags": [],
+  "accent_cost": 3.0,
+  "syllables": 6,
+  "ipa": "t a n a h r u m a h b u d i",
+  "M": [
+   2,
+   4
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 26,
+  "line_score": 8.31,
+  "indonesian": "ya kita pada dasar",
+  "gloss_id": "yes, we at the bottom",
+  "persian_translit": "yâ ki tapa dâda sar",
+  "persian_script_draft": "یا که تپه داده سر",
+  "gloss_fa": "or that the hill let loose (sar dad)",
+  "flags": [],
+  "accent_cost": 2.0,
+  "syllables": 7,
+  "ipa": "j a k i t a p a d a d a s a r",
+  "M": [
+   3,
+   2
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 27,
+  "line_score": 8.31,
+  "indonesian": "hari desa dan awam",
+  "gloss_id": "village day and commoners",
+  "persian_translit": "har 'id-e sadâ nav-am",
+  "persian_script_draft": "هر عید صدا نوم",
+  "gloss_fa": "every feast of sound, I am new",
+  "flags": [
+   "script"
+  ],
+  "accent_cost": 2.0,
+  "syllables": 7,
+  "ipa": "h a r i d e s a d a n a w a m",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 28,
+  "line_score": 8.25,
+  "indonesian": "cara roda dasar",
+  "gloss_id": "the way of the basic wheel",
+  "persian_translit": "châra ro dâd 'asar",
+  "persian_script_draft": "چاره رو داد اثر",
+  "gloss_fa": "the effect gave the remedy (colloquial râ as ro)",
+  "flags": [],
+  "accent_cost": 2.0,
+  "syllables": 6,
+  "ipa": "tʃ a r a r o d a d a s a r",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 29,
+  "line_score": 8.25,
+  "indonesian": "nama roda dasar",
+  "gloss_id": "the name of the basic wheel",
+  "persian_translit": "nâma ro dâd 'asar",
+  "persian_script_draft": "نامه رو داد اثر",
+  "gloss_fa": "the effect delivered the letter (colloquial râ)",
+  "flags": [],
+  "accent_cost": 2.0,
+  "syllables": 6,
+  "ipa": "n a m a r o d a d a s a r",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 30,
+  "line_score": 8.2,
+  "indonesian": "doa jadi desa mari",
+  "gloss_id": "prayer becomes a village; come",
+  "persian_translit": "do'â jâ did-e samar-i",
+  "persian_script_draft": "دعا جا دیده ثمری",
+  "gloss_fa": "prayer has found its place - a fruit",
+  "flags": [
+   "loan"
+  ],
+  "accent_cost": 3.0,
+  "syllables": 8,
+  "ipa": "d o a dʒ a d i d e s a m a r i",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 31,
+  "line_score": 8.15,
+  "indonesian": "tanah tadi dan kabut",
+  "gloss_id": "the earlier land and fog",
+  "persian_translit": "tanhâ tâ did 'ankabut",
+  "persian_script_draft": "تنها تا دید عنکبوت",
+  "gloss_fa": "alone, till the spider saw",
+  "flags": [],
+  "accent_cost": 3.0,
+  "syllables": 7,
+  "ipa": "t a n a h t a d i d a n k a b u t",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 32,
+  "line_score": 8.08,
+  "indonesian": "rumah sudah rahim",
+  "gloss_id": "the house is already merciful / a womb",
+  "persian_translit": "rum hasud har 'âh-im",
+  "persian_script_draft": "روم حسود هر آهیم",
+  "gloss_fa": "Rome is envious; we are every sigh",
+  "flags": [],
+  "accent_cost": 3.0,
+  "syllables": 6,
+  "ipa": "r u m a h s u d a h r a h i m",
+  "M": [
+   3,
+   2
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 33,
+  "line_score": 7.96,
+  "indonesian": "hal ibu dasar rukun",
+  "gloss_id": "mother's matter [is] the basis of concord",
+  "persian_translit": "hâli bud 'asar ru kon",
+  "persian_script_draft": "حالی بود اثر رو کن",
+  "gloss_fa": "there was a feeling; reveal the trace",
+  "flags": [
+   "loan"
+  ],
+  "accent_cost": 2.0,
+  "syllables": 7,
+  "ipa": "h a l i b u d a s a r r u k u n",
+  "M": [
+   2,
+   2
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 34,
+  "line_score": 7.92,
+  "indonesian": "tanah tanah tadi drum",
+  "gloss_id": "lands, lands — just now a drum",
+  "persian_translit": "tanhâ tanhâ tâ did rum",
+  "persian_script_draft": "تنها تنها تا دید روم",
+  "gloss_fa": "alone, alone, until he saw Rome",
+  "flags": [],
+  "accent_cost": 5.0,
+  "syllables": 7,
+  "ipa": "t a n a h t a n a h t a d i d r u m",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 35,
+  "line_score": 7.9,
+  "indonesian": "pada darah ekor",
+  "gloss_id": "at the tail's blood",
+  "persian_translit": "pâ dâda rah-e kor",
+  "persian_script_draft": "پا داده ره کور",
+  "gloss_fa": "the blind road has given way / played along",
+  "flags": [],
+  "accent_cost": 2.0,
+  "syllables": 6,
+  "ipa": "p a d a d a r a h e k o r",
+  "M": [
+   2,
+   2
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 36,
+  "line_score": 7.75,
+  "indonesian": "tanah tanah rumah",
+  "gloss_id": "the lands of the house",
+  "persian_translit": "tanhâ tanhâ ro mâh",
+  "persian_script_draft": "تنها تنها رو ماه",
+  "gloss_fa": "alone, alone, on the moon",
+  "flags": [],
+  "accent_cost": 6.0,
+  "syllables": 6,
+  "ipa": "t a n a h t a n a h r u m a h",
+  "M": [
+   2,
+   3
+  ],
+  "G": [
+   3,
+   3
+  ]
+ },
+ {
+  "n": 37,
+  "line_score": 5.87,
+  "indonesian": "hari desa dan imam",
+  "gloss_id": "village day and imam",
+  "persian_translit": "har 'id-e sadâ nem-am",
+  "persian_script_draft": "هر عید صدا نیمم",
+  "gloss_fa": "every feast of sound, I am damp",
+  "flags": [
+   "fp"
+  ],
+  "accent_cost": 2.5,
+  "syllables": 7,
+  "ipa": "h a r i d e s a d a n i m a m",
+  "M": [
+   2,
+   2
+  ],
+  "G": [
+   3,
+   3
+  ]
+ }
+]

@@ -1,0 +1,185 @@
+{
+ "title_id": "Tanah, Tanah, Rumah",
+ "title_fa": "تنها، تنها، رو ماه",
+ "title_fa_translit": "tanhâ, tanhâ, ru mâh",
+ "lines": [
+  {
+   "n": 0,
+   "indonesian": "doa jadi desa buram",
+   "gloss_id": "prayer becomes a blurred village",
+   "persian_script": "دعا جا دیده، صبورم",
+   "persian_translit": "do'â jâ dide, sabur-am",
+   "gloss_fa": "the prayer has found its place; I am patient",
+   "why_here": "Dawn prayer opens both poems: village blur, patient waiting.",
+   "ipa_compromise": "d o (ʔ) aː dʒ aː d i d e s a b u r a m",
+   "ipa_id": "d o a dʒ a d i d e s a b u r a m",
+   "ipa_fa": "d o ʔ aː dʒ aː d i d e s a b u r a m",
+   "accent_cost": 3.0,
+   "sylls": 8,
+   "notes": [
+    "fa /q/ deleted (cost 1)",
+    "a~A (cost 1.0)",
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 12,
+   "indonesian": "hari desa dan ayam",
+   "gloss_id": "the village day and the chickens",
+   "persian_script": "هر عیدِ صدا نی‌ام",
+   "persian_translit": "har 'id-e sadâ nay-am",
+   "gloss_fa": "at every feast of sound, I am the reed-flute",
+   "why_here": "Morning village noise; the Persian voice becomes the reed.",
+   "ipa_compromise": "h a r i d e s a d aː n a j a m",
+   "ipa_id": "h a r i d e s a d a n a j a m",
+   "ipa_fa": "h a r i d e s a d aː n a j a m",
+   "accent_cost": 1.0,
+   "sylls": 7,
+   "notes": [
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 7,
+   "indonesian": "hal ibu dasar rumah",
+   "gloss_id": "mother's matter is the foundation of the house",
+   "persian_script": "حالی بود، اثر رو مه",
+   "persian_translit": "hâli bud, 'asar ru mah",
+   "gloss_fa": "there was a feeling — a trace upon the moon",
+   "why_here": "Mother anchors the house; the moon receives its first trace.",
+   "ipa_compromise": "h aː l i b u d a s a r r u m a h",
+   "ipa_id": "h a l i b u d a s a r r u m a h",
+   "ipa_fa": "h aː l i b u d a s a r r u m a h",
+   "accent_cost": 1.0,
+   "sylls": 7,
+   "notes": [
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 6,
+   "indonesian": "tanah ibu dalam tiram",
+   "gloss_id": "mother's land inside an oyster",
+   "persian_script": "تن آهی بود، علم، تیرم",
+   "persian_translit": "tan 'âhi bud, 'alam, tir-am",
+   "gloss_fa": "the body was a sigh; O banner, I am the arrow",
+   "why_here": "Land closes inward like an oyster; body exhales into sigh.",
+   "ipa_compromise": "t a n aː h i b u d a l a m t i r a m",
+   "ipa_id": "t a n a h i b u d a l a m t i r a m",
+   "ipa_fa": "t a n aː h i b u d a l a m t i r a m",
+   "accent_cost": 1.0,
+   "sylls": 8,
+   "notes": [
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 23,
+   "indonesian": "tadi dalam budi",
+   "gloss_id": "a moment ago, within kindness",
+   "persian_script": "تا دید، علم بودی",
+   "persian_translit": "tâ did, 'alam budi",
+   "gloss_fa": "the moment he looked, you were the banner",
+   "why_here": "Reflective pause; the absent you raised like a banner.",
+   "ipa_compromise": "t aː d i d a l a m b u d i",
+   "ipa_id": "t a d i d a l a m b u d i",
+   "ipa_fa": "t aː d i d a l a m b u d i",
+   "accent_cost": 1.0,
+   "sylls": 6,
+   "notes": [
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 5,
+   "indonesian": "kita ada malam rahim",
+   "gloss_id": "we are here; the night is a womb",
+   "persian_script": "که تا عدم، علم، رهیم",
+   "persian_translit": "ki tâ 'adam, 'alam, rah-im",
+   "gloss_fa": "for until nothingness, banner aloft, we are the road",
+   "why_here": "Night falls womb-like; the road turns toward nothingness.",
+   "ipa_compromise": "k i t aː ʔ a d a m a l a m r a h i m",
+   "ipa_id": "k i t a ʔ a d a m a l a m r a h i m",
+   "ipa_fa": "k i t aː ʔ a d a m a l a m r a h i m",
+   "accent_cost": 1.0,
+   "sylls": 8,
+   "notes": [
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 2,
+   "indonesian": "rusa dan abu di rumah",
+   "gloss_id": "the deer and the ash are in the house",
+   "persian_script": "رو، صدا نبودی رو مه",
+   "persian_translit": "ro, sadâ nabudi ru mah",
+   "gloss_fa": "go — you were not even a sound upon the moon",
+   "why_here": "Ash enters the house; on the moon the voice is denied.",
+   "ipa_compromise": "r o̞ s a d aː n a b u d i r u m a h",
+   "ipa_id": "r u s a d a n a b u d i r u m a h",
+   "ipa_fa": "r o s a d aː n a b u d i r u m a h",
+   "accent_cost": 2.0,
+   "sylls": 8,
+   "notes": [
+    "u~o (cost 1.0)",
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 32,
+   "indonesian": "rumah sudah rahim",
+   "gloss_id": "the house has already become a womb",
+   "persian_script": "روم حسود، هر آهیم",
+   "persian_translit": "rum hasud, har 'âh-im",
+   "gloss_fa": "Rome is envious; we are every sigh",
+   "why_here": "House completes itself as womb; all that remains is sigh.",
+   "ipa_compromise": "r u m a͡h s u d a͡h r aː h i m",
+   "ipa_id": "r u m a h s u d a h r a h i m",
+   "ipa_fa": "r u m h a s u d h a r aː h i m",
+   "accent_cost": 3.0,
+   "sylls": 6,
+   "notes": [
+    "metathesis a+h ~ h+a (cost 1.0)",
+    "metathesis a+h ~ h+a (cost 1.0)",
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 31,
+   "indonesian": "tanah tadi dan kabut",
+   "gloss_id": "the land from before, and the fog",
+   "persian_script": "تنها تا دید عنکبوت",
+   "persian_translit": "tanhâ tâ did 'ankabut",
+   "gloss_fa": "alone, until the spider saw",
+   "why_here": "Fog erases the land; only the spider still witnesses.",
+   "ipa_compromise": "t a n a͡h t aː d i d a n k a b u t",
+   "ipa_id": "t a n a h t a d i d a n k a b u t",
+   "ipa_fa": "t a n h aː t aː d i d a n k a b u t",
+   "accent_cost": 3.0,
+   "sylls": 7,
+   "notes": [
+    "metathesis a+h ~ h+A (cost 1.0+1)",
+    "a~A (cost 1.0)"
+   ]
+  },
+  {
+   "n": 20,
+   "indonesian": "tanah tanah rumah",
+   "gloss_id": "land, land, home",
+   "persian_script": "تنها، تنها، رو ماه",
+   "persian_translit": "tanhâ, tanhâ, ru mâh",
+   "gloss_fa": "alone, alone, upon the moon",
+   "why_here": "Closing chant: earth becomes home, solitude becomes moon.",
+   "ipa_compromise": "t a n a͡h t a n a͡h r u m aː h",
+   "ipa_id": "t a n a h t a n a h r u m a h",
+   "ipa_fa": "t a n h aː t a n h aː r u m aː h",
+   "accent_cost": 5.0,
+   "sylls": 6,
+   "notes": [
+    "metathesis a+h ~ h+A (cost 1.0+1)",
+    "metathesis a+h ~ h+A (cost 1.0+1)",
+    "a~A (cost 1.0)"
+   ]
+  }
+ ]
+}

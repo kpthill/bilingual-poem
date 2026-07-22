@@ -8,10 +8,13 @@ meanings. (A two-sided homophonic poem: unlike van Rooten's
 
 Deliverables:
 - `poem.md` — the poem: IPA / Indonesian / Persian (script + translit),
-  with per-line accent-cost annotations.
+  with per-line accent-cost annotations and the blind audit table.
 - `report.md` — lexicon sizes, search funnel statistics, judge scores,
-  and rejected alternatives.
+  iteration story, and rejected alternatives.
 - `src/` — the runnable search + scoring code (this file explains how).
+- `results/` — machine-readable artifacts: all 38 judge-passing lines
+  (`survivors.json`), the assembled poem (`final_poem.json`), blind
+  audits, coherence judgment, and rejected-alternative exhibits.
 
 ## Pipeline
 

@@ -1,0 +1,218 @@
+{
+ "doa jadi desa buram": [
+  {
+   "id": "doa jadi debu dasar",
+   "fa": "do'â jâ did-e bud 'asar",
+   "M": [
+    3,
+    3
+   ],
+   "G": [
+    4,
+    3
+   ],
+   "why_rejected": "both readings coherent; doa/do'a shared loan",
+   "passed": true
+  },
+  {
+   "id": "doa jadi drum alam",
+   "fa": "do'â jâ did ru mâl-am",
+   "M": [
+    4,
+    2
+   ],
+   "G": [
+    4,
+    2
+   ],
+   "why_rejected": "ID strong line; FA second half collapses; doa shared",
+   "passed": false
+  },
+  {
+   "id": "doa jadi dewa licin",
+   "fa": "do'â jâ did-e vali chin",
+   "M": [
+    4,
+    2
+   ],
+   "G": [
+    4,
+    2
+   ],
+   "why_rejected": "strong ID image; FA tail disjoint",
+   "passed": false
+  },
+  {
+   "id": "doa jadi desa mari",
+   "fa": "do'â jâ did-e samar-i",
+   "M": [
+    2,
+    3
+   ],
+   "G": [
+    3,
+    3
+   ],
+   "why_rejected": "both parseable; FA quietly gnomic",
+   "passed": true
+  },
+  {
+   "id": "doa jadi drum anda",
+   "fa": "do'â jâ did ru mânda",
+   "M": [
+    3,
+    2
+   ],
+   "G": [
+    4,
+    2
+   ],
+   "why_rejected": "ID coherent surreal; FA loose; shared loan doa/do'â",
+   "passed": false
+  }
+ ],
+ "tanah tanah tanam": [
+  {
+   "id": "tanah tanah tiram",
+   "fa": "tanhâ tanhâ tir-am",
+   "M": [
+    2,
+    4
+   ],
+   "G": [
+    3,
+    4
+   ],
+   "why_rejected": "FA reading genuinely strong; ID bare NP acceptable",
+   "passed": true
+  },
+  {
+   "id": "tanah tanah rumah",
+   "fa": "tanhâ tanhâ ru mâh",
+   "M": [
+    2,
+    4
+   ],
+   "G": [
+    3,
+    4
+   ],
+   "why_rejected": "FA reading genuinely lovely; ID plain NP",
+   "passed": true
+  },
+  {
+   "id": "tanah tanah tadi drum",
+   "fa": "tanhâ tanhâ tâ did rum",
+   "M": [
+    2,
+    3
+   ],
+   "G": [
+    3,
+    3
+   ],
+   "why_rejected": "both parse; FA genuinely poetic, dislocated object allowed",
+   "passed": true
+  },
+  {
+   "id": "tanah tanah rumah",
+   "fa": "tanhâ tanhâ ro mâh",
+   "M": [
+    2,
+    3
+   ],
+   "G": [
+    3,
+    3
+   ],
+   "why_rejected": "FA colloquial ro; evocative verbless fragment",
+   "passed": true
+  },
+  {
+   "id": "tanah tanah tadi enam",
+   "fa": "tanhâ tanhâ tâ din-am",
+   "M": [
+    3,
+    2
+   ],
+   "G": [
+    3,
+    2
+   ],
+   "why_rejected": "ID reduplicated plural works; FA verbless trail",
+   "passed": false
+  }
+ ],
+ "rusa dan abu di rumah": [
+  {
+   "id": "rusa dan ayam",
+   "fa": "ru sadâ nay-am",
+   "M": [
+    3,
+    3
+   ],
+   "G": [
+    4,
+    3
+   ],
+   "why_rejected": "Persian nay evokes Rumi; Indonesian clean surreal NP",
+   "passed": true
+  },
+  {
+   "id": "rusa dan abu di badan",
+   "fa": "ru sadâ nabud-i badan",
+   "M": [
+    3,
+    2
+   ],
+   "G": [
+    4,
+    2
+   ],
+   "why_rejected": "badan shared loan; ID good, FA tail unlinked",
+   "passed": false
+  },
+  {
+   "id": "rusa dan abu ditanam",
+   "fa": "ru sadâ nabud-i tan-am",
+   "M": [
+    4,
+    1
+   ],
+   "G": [
+    4,
+    2
+   ],
+   "why_rejected": "ID striking grammatical passive; FA pieces do not join",
+   "passed": false
+  },
+  {
+   "id": "rusa dan imam",
+   "fa": "ru sadâ nim-am",
+   "M": [
+    3,
+    2
+   ],
+   "G": [
+    4,
+    3
+   ],
+   "why_rejected": "Indonesian surreal NP works; Persian 'ru sadâ' strained",
+   "passed": true
+  },
+  {
+   "id": "rusa dan awam",
+   "fa": "ru sadâ nav-am",
+   "M": [
+    3,
+    2
+   ],
+   "G": [
+    4,
+    3
+   ],
+   "why_rejected": "Indonesian surreal NP works; Persian 'ru sadâ' strained",
+   "passed": true
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+[
+ {
+  "line": 1,
+  "heard": "doâ [dʒâ?] dide saburam",
+  "script": "دعا … دیده صبورم",
+  "gloss": "prayer … [the] eye/seen, I am patient",
+  "recoverability": 2,
+  "note": "The weak glottal makes 'do-(ʔ)â' land immediately as doʔâ (دعا, 'prayer'); 'saburam' (صبورم) and 'dide' (دیده) are clean words. But the middle 'dʒâ' floats free and the whole thing does not cohere into a Persian clause — a string of real words, not a sentence."
+ },
+ {
+  "line": 2,
+  "heard": "haride sadâ … na(y)am",
+  "script": "… صدا …",
+  "gloss": "… voice/sound … (rest not Persian)",
+  "recoverability": 2,
+  "note": "'sadâ' (صدا, voice) pops out. 'haride' is NOT Persian — the intended word would be xaride (خریده, 'bought') with x, not h; with h it is a non-word. Tail '-najam/-nayam' does not resolve to a word."
+ },
+ {
+  "line": 3,
+  "heard": "hâli bud[a] sar …",
+  "script": "حالی بود … سر …",
+  "gloss": "a state / mood, was, head …",
+  "recoverability": 2,
+  "note": "'hâli' (حالی) + 'bud' (بود, 'was') read fine and 'sar' (سر, 'head') is there, but the closing 'rumah/-rumah' is not a Persian word (rou-mâh would be forced). Fragmentary."
+ },
+ {
+  "line": 4,
+  "heard": "tanâhi budam alam tir(e)am",
+  "script": "تنهایی بودم الم …",
+  "gloss": "loneliness, I was, pain/sorrow …",
+  "recoverability": 3,
+  "note": "Best-parsing region. 'tanâhi' is one metathesis away from tanhâyi (تنهایی, 'loneliness'); 'budam' (بودم, 'I was') and 'alam' (الم, 'sorrow') are clean. 'tiram' hovers near tireh (تیره, 'dark') / tir (تیر) but doesn't settle. Reads almost like a broken line of verse."
+ },
+ {
+  "line": 5,
+  "heard": "tâ did … alam budi",
+  "script": "تا … الم بودی",
+  "gloss": "until, saw, pain, you were",
+  "recoverability": 2,
+  "note": "'tâ' (تا, 'until') and 'budi' (بودی, 'you were') anchor the ends; 'did' (دید) and 'alam' sit in between but the medial 'da-lam' boundary is ambiguous. Words yes, clause no."
+ },
+ {
+  "line": 6,
+  "heard": "ki tâ adam alam rahim",
+  "script": "کی تا آدم … رحیم",
+  "gloss": "who, until, human/Adam, pain, merciful",
+  "recoverability": 1,
+  "note": "A row of disconnected real morphemes — ki (کی), tâ (تا), adam (آدم/عدم), rahim (رحیم) — with the weak glottal in 'tâ-(ʔ)a-dam' just marking a hiatus. No syntax binds them; reads as noise made of Persian-shaped beads."
+ },
+ {
+  "line": 7,
+  "heard": "ro sadâ nabudi ru mâh",
+  "script": "… صدا نبودی روی ماه",
+  "gloss": "… voice, you were not, on(to) the moon",
+  "recoverability": 2,
+  "note": "Three genuine recoveries: 'sadâ' (صدا), 'nabud(i)' (نبود/نبودی, 'was/were not'), and 'mâh' (ماه, 'moon') with 'ru mâh' = روی ماه. The leading 'ro̞' and glue between them keep it from becoming a real sentence."
+ },
+ {
+  "line": 8,
+  "heard": "ru mâh sude râhim",
+  "script": "روی ماه … …",
+  "gloss": "on the moon, become(?), …",
+  "recoverability": 2,
+  "note": "'mâh' (ماه) is solid; 'sude' is one sibilant off from shode (شده, 'became') — s for sh is exactly the foreign-tint you'd expect. 'râhim' splits between râh (راه, 'road') and the name Rahim (رحیم) and won't commit."
+ },
+ {
+  "line": 9,
+  "heard": "tanah tâ didan-e kabut",
+  "script": "… تا دیدنِ کبود؟",
+  "gloss": "…, until seeing, bruise-blue / pigeon(?)",
+  "recoverability": 2,
+  "note": "'tâ didan' (تا دیدن, 'until seeing') is the clear spine. 'kabut' is near kabud (کبود, 'livid/bruise-blue') or kabutar (کبوتر, 'pigeon'). The opening 'tanah' (a͡h weak) does NOT reach tanhâ (تنها) — the h closes the syllable instead of preceding â, so my ear gets tane (تنه, 'trunk/body') at most."
+ },
+ {
+  "line": 10,
+  "heard": "tanhâ tanhâ ru mâh",
+  "script": "تنها تنها روی ماه",
+  "gloss": "alone, alone, on the moon / on [her] face",
+  "recoverability": 3,
+  "note": "Most Persian-sounding line. The reduplication pulls 'tanah tanah' toward tanhâ tanhâ (تنها تنها, 'alone, alone') and 'ru mâh' = روی ماه ('on the moon' or, idiomatically, a face). Still slightly off: the trailing weak -h in 'tanah' isn't the full tanhâ, so it's a strong impression rather than a certainty."
+ }
+]

@@ -1,0 +1,72 @@
+[
+ {
+  "line": 1,
+  "heard": "doa jadi desa buram",
+  "gloss": "prayer becomes/so blurry village",
+  "recoverability": 3,
+  "note": "do(ʔ)aː parses as 'doa' (prayer), dʒaːdi as 'jadi', 'desa' and 'buram' clear. Words recover but the phrase makes no coherent sense; the long/glottal in 'doa' is slightly unnatural."
+ },
+ {
+  "line": 2,
+  "heard": "hari desa dan ayam",
+  "gloss": "day village and chicken",
+  "recoverability": 4,
+  "note": "Plain [j] in 'ajam' heard as 'ayam' (chicken); 'daːn' = 'dan' (and). All words parse cleanly; meaning is a nonsensical list."
+ },
+ {
+  "line": 3,
+  "heard": "hali(bu) dasar rumah (?)",
+  "gloss": "??? foundation house (only 'dasar rumah' recovers)",
+  "recoverability": 2,
+  "note": "The double-r 'sar rumah' resolves to 'dasar rumah' (house foundation), clear. The opening 'haːli bu' does not parse; possibly a garbled 'ibu' (mother) buried in it, but a native ear does not land on a word."
+ },
+ {
+  "line": 4,
+  "heard": "tanah ibu dalam tiram",
+  "gloss": "earth/soil mother inside oyster",
+  "recoverability": 4,
+  "note": "'tanah', 'ibu', 'dalam', 'tiram' all parse instantly. Reads as a poetic (if odd) phrase; nothing forced."
+ },
+ {
+  "line": 5,
+  "heard": "tadi dalam budi",
+  "gloss": "earlier/just-now inside mind/character (or the name Budi)",
+  "recoverability": 4,
+  "note": "'tadi', 'dalam', 'budi' all parse. 'budi' is both a common noun (character/reason) and a personal name; either reading is native."
+ },
+ {
+  "line": 6,
+  "heard": "kita ada malam rahim",
+  "gloss": "we exist/there-is night womb",
+  "recoverability": 4,
+  "note": "Weak glottal 'kitaːʔ ada' heard as 'kita ada'; 'malam' and 'rahim' clear. All words recover; sequence is not grammatical prose."
+ },
+ {
+  "line": 7,
+  "heard": "rusa dana budi rumah",
+  "gloss": "deer fund mind/Budi house",
+  "recoverability": 3,
+  "note": "o̞ leans toward u, so 'ro̞sa' heard as 'rusa' (deer) rather than non-Indonesian 'rosa'; 'daːna' = 'dana' (fund). Words recover but stack into no meaning."
+ },
+ {
+  "line": 8,
+  "heard": "rumah sudah rahim",
+  "gloss": "house already womb",
+  "recoverability": 4,
+  "note": "'rumah', 'sudah', 'rahim' all clean; a͡h sequences read naturally as final -h. Words fully recover, meaning surreal."
+ },
+ {
+  "line": 9,
+  "heard": "tanah tadi dan kabut",
+  "gloss": "the-earth earlier and fog/mist",
+  "recoverability": 5,
+  "note": "'tanah tadi dan kabut' parses instantly and is even loosely grammatical ('the earlier earth and the fog'). No friction."
+ },
+ {
+  "line": 10,
+  "heard": "tanah tanah rumah",
+  "gloss": "earth earth house",
+  "recoverability": 5,
+  "note": "Reduplicated 'tanah' plus 'rumah', all instant. Native reduplication pattern; fully recoverable."
+ }
+]
